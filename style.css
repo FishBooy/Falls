@@ -1,0 +1,67 @@
+
+*{ margin: 0;padding: 0}
+body{ background: url(img/bg.png);font-family: '微软雅黑';font-size: 12px;}
+a{ text-decoration: none;}
+
+.no-scroll{overflow: hidden;}
+.falls-wrapper{ margin: 0 auto;position: relative;margin: 0 auto;}
+.falls-wrapper:after{ content: '.';visibility: hidden;display: block;height: 0;clear: both;}
+.falls-item{position: absolute;}
+.item-wrapper{ 
+	width: 236px; margin: 14px 7px 0 7px;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+	-moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+.active{
+	-webkit-box-shadow: 0 2px 5px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 2px 5px 0px rgba(0,0,0,0.4);
+	box-shadow: 0 2px 5px 0px rgba(0,0,0,0.4);
+}
+a.item-img{display: block;border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
+a.item-img img{ display: block;border: none;width: 236px;border-top-left-radius: 3px;border-top-right-radius: 3px;}
+.can-zoom .item-img img{cursor:-webkit-zoom-in;}
+
+.item-title{ border-bottom: #dfdfdf 1px solid; font-size: 12px;font-weight: normal;color: #555;padding: 5px 10px;overflow: hidden;white-space: pre-wrap;}
+.active .item-title{border-bottom-color: #d2d2d2;}
+h2.item-title span{white-space: pre-wrap;word-wrap:break-word;}
+div.item-info p{}
+p.fav-view-src{ overflow: hidden;zoom: 1;}
+a.src{ display:block;height:32px;line-height:30px;font-size:16px;text-align:center;color: #777;background: #f4f4f4;border-top:#fff 1px solid;border-bottom-left-radius: 3px;border-bottom-right-radius: 3px;}
+p.fav-view-src a:hover{background: #ebebeb;border-top-color: #fafafa;color: #333;}
+.fav{ float: left;}
+.view{ float: right;}
+
+.loading{clear: both;height:32px;background:url(img/loading.gif) 50% 0 no-repeat;color: #fff;}
+
+.layers-container{position: fixed;left: 0;top: 0;background-color: rgba(225, 225, 225, 0.95);}
+.layer-outter{position: absolute;padding-bottom: 50px;}
+.layer{
+	padding:10px;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);-moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+	box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.35);
+	z-index: 999;
+}
+.layer .close-btn{display:block;visibility:hidden;width: 30px;height: 30px;background: red;position: absolute;right: 10px;top: 10px;text-indent: -999em;background: url(img/close_btn.png);cursor: pointer;}
+.layer .visible{visibility: visible;}
+.layer img{display: block;}
+
+
+/*hacks for ie6*/
+* html .layers-container{
+	position: absolute;
+	background: #fff;
+	_top: expression(eval(document.documentElement.scrollTop));
+}
