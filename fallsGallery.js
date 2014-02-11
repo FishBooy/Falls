@@ -4,9 +4,9 @@
  * Name: falls 
  * Version: 1.0
  * dataType: json
- * dataFormate:
  * dataLength: 50 one time(ajax request)
- * {
+ * dataFormate:
+ {
 	height: "681"
 	id: "358660"
 	image: "http://www.wookmark.com/images/original/358660_wookmark.jpg"
